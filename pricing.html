@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-surface-variant": "#44474d",
+                        "surface-tint": "#515f78",
+                        "on-surface": "#191c1e",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001e2c",
+                        "secondary-fixed": "#62fae3",
+                        "on-primary-container": "#76849f",
+                        "tertiary": "#000000",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#3cddc7",
+                        "secondary": "#006b5f",
+                        "outline": "#75777e",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b9c7e4",
+                        "on-secondary-fixed-variant": "#005047",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-container": "#62fae3",
+                        "outline-variant": "#c5c6cd",
+                        "tertiary-fixed": "#c4e7ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "tertiary-container": "#001e2c",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-container": "#007165",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#0d1c32",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#008ebf",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "on-primary-fixed-variant": "#39475f",
+                        "surface-container-highest": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-xl-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 9999px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #006b5f;
+            cursor: pointer;
+            margin-top: -8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<nav class="fixed top-0 w-full z-50 shadow-[0px_4px_20px_rgba(10,25,47,0.05)] bg-surface-container-lowest dark:bg-primary-container">
+<div class="flex justify-between items-center h-20 px-md md:px-lg max-w-container-max mx-auto">
+<span class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">CleanMove Pro</span>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors duration-200" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors duration-200" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+<a class="bg-primary text-on-primary px-md py-sm rounded-lg font-label-bold text-label-bold hover:bg-on-primary-fixed-variant transition-transform active:scale-95" href="../book_a_service_cleanmove_pro_realistic/book.html">Get a Quote</a>
+</div>
+<button id="mobileNavButton" class="md:hidden text-primary" aria-expanded="false" aria-controls="mobileNav">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobileNav" class="md:hidden hidden bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col px-md py-md gap-3">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors duration-200" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary transition-colors duration-200" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-3" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+<a class="bg-primary text-on-primary px-md py-sm rounded-lg font-label-bold text-label-bold text-center" href="../book_a_service_cleanmove_pro_realistic/book.html">Get a Quote</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-xl px-md md:px-lg max-w-container-max mx-auto text-center">
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-sm">Transparent Pricing. No Surprises.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Calculate your investment in a cleaner space and a smoother move with our professional estimators.</p>
+</section>
+<section class="px-md md:px-lg max-w-container-max mx-auto mb-xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] p-md md:p-xl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Quick Estimate</h2>
+<p class="text-on-surface-variant">Adjust the sliders to see a price range based on your needs.</p>
+</div>
+<div class="space-y-md">
+<div>
+<div class="flex justify-between items-center mb-xs">
+<label class="font-label-bold text-label-bold text-primary">Home Size (Sq Ft)</label>
+<span class="text-secondary font-bold">1,200 sq ft</span>
+</div>
+<input class="cursor-pointer" max="5000" min="500" type="range" value="1200"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<label class="font-label-bold text-label-bold text-primary">Moving Distance (Miles)</label>
+<span class="text-secondary font-bold">45 miles</span>
+</div>
+<input class="cursor-pointer" max="500" min="0" type="range" value="45"/>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<div class="flex flex-col gap-xs">
+<span class="font-label-bold text-label-bold">Service Type</span>
+<select class="border-outline-variant rounded-lg p-sm bg-surface-container-low focus:ring-secondary focus:border-secondary transition-all">
+<option>Cleaning Only</option>
+<option>Moving Only</option>
+<option selected="">Clean &amp; Move Bundle</option>
+</select>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-bold text-label-bold">Bedrooms</span>
+<select class="border-outline-variant rounded-lg p-sm bg-surface-container-low focus:ring-secondary focus:border-secondary transition-all">
+<option>Studio</option>
+<option>1-2 Bedrooms</option>
+<option selected="">3+ Bedrooms</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container rounded-xl p-xl flex flex-col items-center justify-center text-center relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
+<span class="text-secondary-fixed font-label-bold text-label-bold mb-xs uppercase tracking-widest">Estimated Total</span>
+<div class="text-on-primary font-display-xl text-display-xl mb-md">KES 45,000 - KES 62,500</div>
+<p class="text-on-primary-container font-body-md text-body-md max-w-sm mb-lg">This is a rough estimate. For a guaranteed quote, book a free digital walkthrough with our team.</p>
+<a class="bg-secondary-container text-on-secondary-container px-xl py-md rounded-full font-label-bold text-label-bold hover:bg-secondary-fixed transition-all hover:scale-105 shadow-lg inline-flex items-center justify-center" href="../book_a_service_cleanmove_pro_realistic/book.html">Lock in Price</a>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low py-xl">
+<div class="px-md md:px-lg max-w-container-max mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Compare Our Packages</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Structured service tiers designed for every level of residential and commercial need.</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="text-left border-b border-outline-variant">
+<th class="py-md px-md font-headline-md text-headline-md text-primary w-1/4">Feature</th>
+<th class="py-md px-md w-1/4">
+<div class="text-primary font-headline-md text-headline-md">Basic</div>
+<div class="text-on-surface-variant font-label-bold text-label-bold">Essential Support</div>
+</th>
+<th class="py-md px-md w-1/4 relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] uppercase font-bold py-1 px-3 rounded-full">Most Popular</div>
+<div class="text-secondary font-headline-md text-headline-md">Premium</div>
+<div class="text-on-surface-variant font-label-bold text-label-bold">Full Concierge</div>
+</th>
+<th class="py-md px-md w-1/4">
+<div class="text-primary font-headline-md text-headline-md">Pro</div>
+<div class="text-on-surface-variant font-label-bold text-label-bold">Enterprise Grade</div>
+</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant">
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">Standard Cleaning</td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">Eco-Friendly Supplies</td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">Deep Move-In Sanitize</td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-outline">remove</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">Packing Services</td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-outline">remove</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">24/7 Priority Support</td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-outline">remove</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-outline">remove</span></td>
+<td class="py-md px-md"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors">
+<td class="py-md px-md font-label-bold text-label-bold">Insurance Coverage</td>
+<td class="py-md px-md">Up to KES 500,000</td>
+<td class="py-md px-md">Up to KES 5,000,000</td>
+<td class="py-md px-md">Unlimited</td>
+</tr>
+<tr>
+<td class="py-lg px-md"></td>
+<td class="py-lg px-md">
+<button class="w-full border border-primary text-primary px-md py-sm rounded hover:bg-primary hover:text-on-primary transition-all">Select Basic</button>
+</td>
+<td class="py-lg px-md">
+<button class="w-full bg-secondary text-white px-md py-sm rounded hover:bg-secondary-fixed-dim transition-all shadow-md">Select Premium</button>
+</td>
+<td class="py-lg px-md">
+<button class="w-full border border-primary text-primary px-md py-sm rounded hover:bg-primary hover:text-on-primary transition-all">Select Pro</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="rounded-xl overflow-hidden shadow-lg h-[400px] relative">
+<img alt="Professional cleaning team at work" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8H2tQ8RRxdsb1D51GSJ97QrhLdDLM9D0XWGpEp38EktUB2CSJKNr41ylLEhgBsA1uMZpdvcNVMSDvuGAqIW_cu4oCtZI_YWUWIE-0aVo7ZCfYc12qjedgL_HH0QWLhD1Gra5U7BQKBVvYwwKprCUArbDNTp6TWMWMlELfH_EkDFIIyxKT4oJs-3rbIujVKu5e_icQ5BHcq3YWMYR6W4AN_2YoFVrY_IsnYe6Bnh5EZ-1jQ8uDyYcMhX9zbVDvt85LQ5KNxcgg3Q"/>
+</div>
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Why our pricing is the most trusted in the industry.</h2>
+<ul class="space-y-sm">
+<li class="flex gap-md">
+<span class="material-symbols-outlined text-secondary bg-secondary-container p-xs rounded-full h-fit">verified_user</span>
+<div>
+<p class="font-label-bold text-label-bold">Guaranteed Quotes</p>
+<p class="text-on-surface-variant">Once we perform a digital walkthrough, the price we give is the price you pay. No hidden fuel surcharges or stair fees.</p>
+</div>
+</li>
+<li class="flex gap-md">
+<span class="material-symbols-outlined text-secondary bg-secondary-container p-xs rounded-full h-fit">history</span>
+<div>
+<p class="font-label-bold text-label-bold">Time-Saving Efficiency</p>
+<p class="text-on-surface-variant">Our crews are trained to move 30% faster than industry standard without sacrificing an ounce of care.</p>
+</div>
+</li>
+<li class="flex gap-md">
+<span class="material-symbols-outlined text-secondary bg-secondary-container p-xs rounded-full h-fit">eco</span>
+<div>
+<p class="font-label-bold text-label-bold">Premium Supplies Included</p>
+<p class="text-on-surface-variant">We never charge extra for professional-grade, non-toxic cleaning agents or premium padding for your furniture.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary-container text-on-primary-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-md md:px-lg py-xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="text-headline-md font-headline-md text-surface-container-lowest block mb-md">CleanMove Pro</span>
+<p class="text-surface-variant font-body-md text-body-md max-w-sm mb-md">Redefining the standards of moving and cleaning through precision, care, and absolute transparency.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed">alternate_email</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary-fixed mb-md uppercase">Services</h4>
+<ul class="space-y-sm">
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Residential Cleaning</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Commercial Moving</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Packing Services</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Storage Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary-fixed mb-md uppercase">Legal</h4>
+<ul class="space-y-sm">
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../book_a_service_cleanmove_pro_realistic/book.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="px-md md:px-lg py-md border-t border-on-primary-fixed-variant max-w-container-max mx-auto text-center md:text-left">
+<p class="text-surface-variant font-label-bold text-label-bold">© 2024 CleanMove Pro. All rights reserved. Built for Trust &amp; Reliability.</p>
+</div>
+</footer>
+<script>
+  const mobileNavButton = document.getElementById("mobileNavButton");
+  const mobileNav = document.getElementById("mobileNav");
+  if (mobileNavButton && mobileNav) {
+    mobileNavButton.addEventListener("click", () => {
+      const isOpen = !mobileNav.classList.toggle("hidden");
+      mobileNavButton.setAttribute("aria-expanded", isOpen);
+    });
+  }
+</script>
+</body></html>

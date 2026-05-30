@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#7bd0ff",
+            "surface-container-high": "#e6e8ea",
+            "background": "#f7f9fb",
+            "on-primary-fixed": "#0d1c32",
+            "on-surface-variant": "#44474d",
+            "surface-tint": "#515f78",
+            "on-surface": "#191c1e",
+            "surface-container": "#eceef0",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#001e2c",
+            "secondary-fixed": "#62fae3",
+            "on-primary-container": "#76849f",
+            "tertiary": "#000000",
+            "surface-bright": "#f7f9fb",
+            "secondary-fixed-dim": "#3cddc7",
+            "secondary": "#006b5f",
+            "outline": "#75777e",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#b9c7e4",
+            "on-secondary-fixed-variant": "#005047",
+            "inverse-on-surface": "#eff1f3",
+            "secondary-container": "#62fae3",
+            "outline-variant": "#c5c6cd",
+            "tertiary-fixed": "#c4e7ff",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004c69",
+            "tertiary-container": "#001e2c",
+            "primary-fixed-dim": "#b9c7e4",
+            "on-background": "#191c1e",
+            "inverse-surface": "#2d3133",
+            "on-secondary-fixed": "#00201c",
+            "surface-dim": "#d8dadc",
+            "primary-fixed": "#d6e3ff",
+            "on-secondary-container": "#007165",
+            "surface-variant": "#e0e3e5",
+            "primary-container": "#0d1c32",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "surface": "#f7f9fb",
+            "on-tertiary-container": "#008ebf",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary": "#000000",
+            "on-primary-fixed-variant": "#39475f",
+            "surface-container-highest": "#e0e3e5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "xs": "8px",
+            "container-max": "1280px",
+            "md": "24px",
+            "xl": "80px",
+            "sm": "16px",
+            "gutter": "24px",
+            "base": "4px",
+            "lg": "48px"
+          },
+          "fontFamily": {
+            "label-bold": ["Inter"],
+            "headline-md": ["Montserrat"],
+            "display-xl": ["Montserrat"],
+            "headline-lg": ["Montserrat"],
+            "display-xl-mobile": ["Montserrat"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "display-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Section -->
+<header class="fixed top-0 w-full z-50 shadow-[0px_4px_20px_rgba(10,25,47,0.05)] bg-surface-container-lowest dark:bg-primary-container">
+<nav class="flex justify-between items-center h-20 px-md md:px-lg max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">CleanMove Pro</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+</div>
+<a class="hidden md:inline-flex bg-secondary text-on-secondary px-md py-xs rounded-full font-label-bold text-label-bold hover:bg-on-secondary-container transition-all active:scale-95" href="../book_a_service_cleanmove_pro_realistic/book.html">
+        Get a Quote
+      </a>
+<button id="mobileNavButton" class="md:hidden text-primary" aria-expanded="false" aria-controls="mobileNav">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+</nav>
+<div id="mobileNav" class="md:hidden hidden bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col px-md py-md gap-3">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-secondary dark:text-secondary-fixed border-b border-outline-variant pb-3" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 pb-3" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 pb-3" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+<a class="bg-secondary text-on-secondary-container px-md py-xs rounded-full font-label-bold text-label-bold text-center" href="../book_a_service_cleanmove_pro_realistic/book.html">Get a Quote</a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A professional, high-resolution photo of professional movers in clean blue uniforms carefully loading high-quality furniture into a clean, modern moving truck. The background shows an upscale residential street in bright morning light. Realistic and high-quality photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvZpBeWxjPxXko9D9T6MukpzVbuvy0m0bt5GQEOptKoqku07wqD39Fe2FvYGCiVN2Ta-3ImvIvyj4I911kmTnEK6BEbkcRoQFo4QXExOYgSZDDdVNparyPdP4GDsUg-2kOdsd8ISDvk4_KzT8DtoHDbY68xDhHA3kqqlKPJEekeJcSiSdLDQCJIWrxJ-ATtvWgys4jgf7rjXgYOoKt9l3IeweLMqQBpEum9u1LlZ5OKul1WMV4aEDWuc3bImhdeVC2o2ngPI8_ixg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-md md:px-lg w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-sm py-1 bg-secondary-container text-on-secondary-container font-label-bold text-label-bold rounded-full mb-md">
+            Premium Moving &amp; Cleaning
+          </span>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-md">
+            Moving You Forward, <br/>
+<span class="text-secondary-fixed">Keeping You Clean</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-lg">
+            The only end-to-end relocation partner that guarantees a spotless transition. Professional packing, secure moving, and deep cleaning services for peace of mind.
+          </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<a class="bg-secondary-container text-on-secondary-container px-lg py-md rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-xs hover:bg-secondary-fixed-dim transition-all active:scale-95 shadow-lg" href="../book_a_service_cleanmove_pro_realistic/book.html">
+              Get a Quote <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline-variant text-white px-lg py-md rounded-lg font-label-bold text-label-bold hover:bg-white/10 transition-all text-center" href="../our_services_cleanmove_pro_realistic/services.html">
+              View Services
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Signals / Stats -->
+<section class="bg-surface-container-lowest py-lg">
+<div class="max-w-container-max mx-auto px-md md:px-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col items-center">
+<div class="text-headline-lg font-headline-lg text-primary">15+</div>
+<div class="text-label-bold font-label-bold text-on-surface-variant">Years in Business</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="text-headline-lg font-headline-lg text-primary">12k+</div>
+<div class="text-label-bold font-label-bold text-on-surface-variant">Happy Moves</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="text-headline-lg font-headline-lg text-primary">4.9/5</div>
+<div class="text-label-bold font-label-bold text-on-surface-variant">Client Rating</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="text-headline-lg font-headline-lg text-primary">100%</div>
+<div class="text-label-bold font-label-bold text-on-surface-variant">Bonded &amp; Insured</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Overview: Bento Grid -->
+<section class="py-xl bg-background">
+<div class="max-w-container-max mx-auto px-md md:px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Elite Service Offerings</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Tailored solutions for your most demanding moving and cleaning needs, delivered with corporate precision and a personal touch.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md h-full">
+<!-- Main Service: Residential -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-outline-variant/30 hover:shadow-[0px_10px_30px_rgba(10,25,47,0.10)] transition-all">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 overflow-hidden">
+<img class="w-full h-full min-h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright, realistic photo of a clean, minimalist kitchen with marble countertops. Natural light floods the space, showcasing a professional cleaning service's high standard. Authentic photography, bright and airy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOw9334qNwrDCGyeLY3AYb5vF-WK8nCmKr1Qe5NZNF48XtMTUxxMz9TvK5kAo6pxAE1B6CHJHsSPBVfdHG-fjvFc1vDulo6ZHOpg_nEzKoxaFrM9zUn7ErNklrJoJg0v8L4sXYnKiW_h49IrnA1I73IwVfxPS6DcHTSKYIOVzbbZJR_-3ZX1v3Rv6aM3j5W0mUOKSwHslHDrX9Aa5Qmc5PBOZJYWh06IVuGNwoz6T5WGx7PhjZSY-WNCcRhvZB2enfzVF5YnXLluQ"/>
+</div>
+<div class="md:w-1/2 p-lg flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-sm" data-weight="fill">home</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Residential Cleaning</h3>
+<p class="text-on-surface-variant mb-md">White-glove deep cleaning service designed for homeowners who value time and perfection. We handle every corner with surgical precision.</p>
+<ul class="space-y-2 mb-md text-label-bold font-label-bold text-primary">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Post-Move Deep Cleans</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Bi-Weekly Maintenance</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Eco-Friendly Supplies</li>
+</ul>
+<button class="text-secondary font-label-bold flex items-center gap-xs group-hover:gap-sm transition-all">
+                  Learn More <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Service: Commercial -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-primary-container text-white p-lg flex flex-col justify-between shadow-lg">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-sm">corporate_fare</span>
+<h3 class="font-headline-md text-headline-md mb-sm">Commercial Moving</h3>
+<p class="text-on-primary-container mb-md text-body-md">Seamless office relocations that minimize downtime. We handle IT equipment, furniture, and logistics with expert care.</p>
+</div>
+<img class="w-full h-40 object-cover rounded-lg mb-md opacity-80 group-hover:opacity-100 transition-all" data-alt="A realistic photo of a clean, modern office space with professional movers efficiently transporting office chairs and equipment. The setting is a professional, high-end commercial building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCRwI5SAVVVl4yaCcO9DP0a_7eOgyD5k5C436_OIvKMcVirKcHtgG3pW3Xy5F5uorIvxxhJcUtwbdDX6UzXvy1G4NtjUillE8ObXuzyklALTc8_RF2__Atp3Vu8iyTJO22zbKU0m8Jw7zQjRWGoQgO31PoJum4bZ0oHT5HqS6Nqnc6xdC6OkwaU8a_zTi0xyB2gqxXnk6uLzppT6bmQP3vzljSkw3mW-hKUBBK-t5ZYk5AVA8dNjCmSzl9tIagdy4n3OCB998PBqA"/>
+<button class="bg-secondary-container text-on-secondary-container py-xs px-md rounded-lg font-label-bold text-label-bold w-full hover:bg-secondary-fixed transition-colors">
+              Request B2B Quote
+            </button>
+</div>
+<!-- Tertiary: Packing -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-lg shadow-[0px_4px_20px_rgba(10,25,47,0.05)] hover:shadow-[0px_10px_30px_rgba(10,25,47,0.10)] transition-all">
+<div class="flex gap-md">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Expert Packing</h3>
+<p class="text-on-surface-variant text-body-md">Custom crating and high-grade materials for your most fragile possessions. Secure from start to finish.</p>
+</div>
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+</div>
+</div>
+</div>
+<!-- Quaternary: Storage -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 p-lg shadow-[0px_4px_20px_rgba(10,25,47,0.05)] hover:shadow-[0px_10px_30px_rgba(10,25,47,0.10)] transition-all">
+<div class="flex gap-md">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Secure Storage</h3>
+<p class="text-on-surface-variant text-body-md">Climate-controlled, 24/7 monitored facilities for short-term or long-term requirements.</p>
+</div>
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">warehouse</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-xl bg-surface-container-low relative">
+<div class="max-w-container-max mx-auto px-md md:px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Our Frictionless Process</h2>
+<p class="text-on-surface-variant">Three simple steps to a cleaner, easier relocation.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-xl">
+<!-- Progress Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-outline-variant/30 z-0"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-secondary-container mb-md shadow-md">
+<span class="text-headline-md font-headline-md text-secondary">01</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-sm">Virtual Quote</h4>
+<p class="text-on-surface-variant">Record a video walkthrough or use our AI inventory tool to get an accurate price in minutes.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-secondary-container mb-md shadow-md">
+<span class="text-headline-md font-headline-md text-secondary">02</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-sm">Precision Execution</h4>
+<p class="text-on-surface-variant">Our team arrives in tracked vehicles, carefully packing and moving your items with tactical care.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-secondary text-white rounded-full flex items-center justify-center border-4 border-secondary-fixed mb-md shadow-md">
+<span class="text-headline-md font-headline-md">03</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-sm">Spotless Reveal</h4>
+<p class="text-on-surface-variant">Once everything is moved, our cleaning crew follows up to ensure your new space is Move-In Ready.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials / Trust -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-md md:px-lg">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Trusted by 12,000+ Families</h2>
+<p class="text-on-surface-variant">See why CleanMove Pro is the top-rated relocation service in the region.</p>
+</div>
+<div class="flex gap-xs">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-lg bg-background rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex text-secondary-fixed-dim mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-primary mb-lg flex-1 italic">"The transition was flawless. They moved our entire 4-bedroom home and had the new place smelling like lemons and looking brand new by dinner time. Incredible value."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a happy woman in a bright, modern living room. Realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5bAL5ITyUALnLtdIXGinUOQBCBH33rx2A_2QhnSkuroycNBNi9OufzN0XzYlC1VJcFb1mVT9PaNGJWRRZkXWWIt0IoCcf9oaWUr0ORUscj4Sa9ga-px2vUF3iesq4L9dCEt-vSIWGvVbxCUOta7wpuetzeLltTBRhOBsahlq4-JKAkXxNGkYarg5IQbBovgc5j5ITWuuaxD8nguV81xgziZ6QWufYYUvYAMrTiw3_1xuIm4u9oO9HnKHdoevE4V2iG63yHB_YZOc"/>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-primary">Sarah Jenkins</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Homeowner, Chicago</div>
+</div>
+</div>
+</div>
+<div class="p-lg bg-primary-container text-white rounded-xl shadow-xl flex flex-col h-full">
+<div class="flex text-secondary-fixed mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-on-primary-container mb-lg flex-1 italic">"Moving our headquarters was a massive task. CleanMove Pro handled our IT rigs and modular desks with zero breakage. Their cleaning crew was the cherry on top. High-authority service."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a confident male executive. Realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG2yRso9Fp0wK2bNQxb_FLXqaDaPL4brj7MEq5rMGqwjxpPrLf8XRjjvdx_OFQi2K4y2rMLXXEY0WZPNi8R37_Jg37LOvgYK6xddZoHPBnGgItytl7tN7TPjRZ4HClXB2y5TnbFO3Hq63_Vmj8YTLi0A7EbctaVt-TPQyW9h0PVoG7XFfM3hhBZcpHYs7J3RiVyjwrMq-Jv1XRx4GCLxgW9xUnVdeJXogSPQGGi7OR5ZFcGn2mL8l7seXbYC8Qo1gp4d8VP2oIy3I"/>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-white">David Thorne</div>
+<div class="text-xs text-secondary-fixed uppercase tracking-wider">CEO, Thorne Tech</div>
+</div>
+</div>
+</div>
+<div class="p-lg bg-background rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex text-secondary-fixed-dim mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-primary mb-lg flex-1 italic">"Reliability at its best. They arrived 5 minutes early and finished 30 minutes ahead of schedule. The cleaning was more thorough than any service I've ever hired."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a satisfied property manager. Realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAREtGRQm8r3PwVcxTbZP-9HP3ewiKH4O_nLP5Hq2YZCD8c8xsnXepGQuKKSmaFMEMt8EtFldomH0JN5RSZihAEMTEb3xM91puqDFAZa3w_PGZcuV-0375l-zrycVgY45Pv1gznprZxq04A7koQBBexXNi2jWzMZ8lMq-ZrX8sz52q-MPVYAewxN2XpsAbAzGNDv4sSfiRxn0Tj2sf0Qay1dp0EFJ9zWDnwUQBbdINNfX_HaCvNVs5B-vpKaxGcaqNng_Rt7e5jM"/>
+</div>
+<div>
+<div class="font-label-bold text-label-bold text-primary">Marcus Reed</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-wider">Property Manager</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-md md:px-lg">
+<div class="bg-secondary p-xl rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="relative z-10 text-center md:text-left">
+<h2 class="font-display-xl text-display-xl-mobile md:text-headline-lg text-white mb-md">Ready for a Cleaner Start?</h2>
+<p class="text-on-secondary text-body-lg mb-lg max-w-xl">Join the thousands of homeowners who chose the premium path. Get your custom quote in under 3 minutes.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center md:justify-start">
+<button class="bg-white text-secondary px-lg py-md rounded-lg font-label-bold text-label-bold hover:bg-secondary-fixed transition-all active:scale-95 shadow-lg">
+                Book a Free Consultation
+              </button>
+<button class="border border-white text-white px-lg py-md rounded-lg font-label-bold text-label-bold hover:bg-white/10 transition-all">
+                Call Us: (800) CLEAN-MOVE
+              </button>
+</div>
+</div>
+<div class="hidden lg:block relative z-10 w-1/3">
+<span class="material-symbols-outlined text-[200px] text-white/20 rotate-12">local_shipping</span>
+</div>
+<!-- Decorative Background Elements -->
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-secondary-fixed-dim/20 rounded-full blur-3xl"></div>
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-on-secondary-container/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-primary-container dark:bg-primary-container border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-md md:px-lg py-xl max-w-container-max mx-auto">
+<div>
+<div class="text-headline-md font-headline-md text-surface-container-lowest mb-md">CleanMove Pro</div>
+<p class="text-surface-variant font-body-md text-body-md mb-md">Setting the gold standard in relocation and cleaning services since 2009.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">social_leaderboard</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">photo_camera</span>
+<span class="material-symbols-outlined text-surface-variant cursor-pointer hover:text-secondary-fixed">alternate_email</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-md uppercase tracking-wider">Services</h4>
+<ul class="space-y-xs font-body-md text-body-md">
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="../our_services_cleanmove_pro_realistic/services.html">Residential Cleaning</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="../our_services_cleanmove_pro_realistic/services.html">Commercial Moving</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="../our_services_cleanmove_pro_realistic/services.html">Packing Services</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="../our_services_cleanmove_pro_realistic/services.html">Storage Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-md uppercase tracking-wider">Legal</h4>
+<ul class="space-y-xs font-body-md text-body-md">
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Licensing</a></li>
+<li><a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Safety Protocols</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-label-bold text-label-bold mb-md uppercase tracking-wider">Newsletter</h4>
+<p class="text-surface-variant text-sm mb-md">Get cleaning tips and moving checklists delivered to your inbox.</p>
+<div class="flex flex-col gap-xs">
+<input class="bg-primary text-white border border-outline px-md py-xs rounded focus:ring-2 focus:ring-secondary outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-secondary text-on-secondary px-md py-xs rounded font-label-bold text-label-bold hover:bg-secondary-fixed transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline/30 py-md text-center">
+<p class="text-surface-variant font-body-md text-body-md">© 2024 CleanMove Pro. All rights reserved. Built for Trust &amp; Reliability.</p>
+</div>
+</footer>
+<script>
+  const mobileNavButton = document.getElementById("mobileNavButton");
+  const mobileNav = document.getElementById("mobileNav");
+  if (mobileNavButton && mobileNav) {
+    mobileNavButton.addEventListener("click", () => {
+      const isOpen = !mobileNav.classList.toggle("hidden");
+      mobileNavButton.setAttribute("aria-expanded", isOpen);
+    });
+  }
+</script>
+</body></html>

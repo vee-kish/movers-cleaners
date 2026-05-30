@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Your Service | CleanMove Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#7bd0ff",
+                      "surface-container-high": "#e6e8ea",
+                      "background": "#f7f9fb",
+                      "on-primary-fixed": "#0d1c32",
+                      "on-surface-variant": "#44474d",
+                      "surface-tint": "#515f78",
+                      "on-surface": "#191c1e",
+                      "surface-container": "#eceef0",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#001e2c",
+                      "secondary-fixed": "#62fae3",
+                      "on-primary-container": "#76849f",
+                      "tertiary": "#000000",
+                      "surface-bright": "#f7f9fb",
+                      "secondary-fixed-dim": "#3cddc7",
+                      "secondary": "#006b5f",
+                      "outline": "#75777e",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b9c7e4",
+                      "on-secondary-fixed-variant": "#005047",
+                      "inverse-on-surface": "#eff1f3",
+                      "secondary-container": "#62fae3",
+                      "outline-variant": "#c5c6cd",
+                      "tertiary-fixed": "#c4e7ff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#004c69",
+                      "tertiary-container": "#001e2c",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-background": "#191c1e",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-fixed": "#00201c",
+                      "surface-dim": "#d8dadc",
+                      "primary-fixed": "#d6e3ff",
+                      "on-secondary-container": "#007165",
+                      "surface-variant": "#e0e3e5",
+                      "primary-container": "#0d1c32",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "on-tertiary-container": "#008ebf",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "primary": "#000000",
+                      "on-primary-fixed-variant": "#39475f",
+                      "surface-container-highest": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "8px",
+                      "container-max": "1280px",
+                      "md": "24px",
+                      "xl": "80px",
+                      "sm": "16px",
+                      "gutter": "24px",
+                      "base": "4px",
+                      "lg": "48px"
+              },
+              "fontFamily": {
+                      "label-bold": ["Inter"],
+                      "headline-md": ["Montserrat"],
+                      "display-xl": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "display-xl-mobile": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "display-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 shadow-[0px_4px_20px_rgba(10,25,47,0.05)] bg-surface-container-lowest dark:bg-primary-container">
+<div class="flex justify-between items-center h-20 px-md md:px-lg max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">CleanMove Pro</div>
+<div class="hidden md:flex gap-md">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold hover:bg-on-primary-fixed-variant transition-all active:scale-95" href="../book_a_service_cleanmove_pro_realistic/book.html">Get a Quote</a>
+<button id="mobileNavButton" class="md:hidden text-primary" aria-expanded="false" aria-controls="mobileNav">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobileNav" class="md:hidden hidden bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col px-md py-md gap-3">
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../home_cleanmove_pro_realistic/home.html">Home</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../our_services_cleanmove_pro_realistic/services.html">Services</a>
+<a class="font-body-md text-body-md font-label-bold text-label-bold text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="../pricing_estimation_cleanmove_pro_realistic/pricing.html">Pricing</a>
+<a class="bg-primary text-on-primary px-md py-2 rounded-lg font-label-bold text-label-bold text-center" href="../book_a_service_cleanmove_pro_realistic/book.html">Get a Quote</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-xl px-md max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Booking Flow Content -->
+<div class="lg:col-span-8 space-y-lg">
+<!-- Progress Stepper -->
+<div class="flex items-center justify-between mb-lg bg-surface-container-low p-md rounded-xl">
+<div class="flex flex-col items-center gap-xs">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold">1</div>
+<span class="text-label-bold font-label-bold text-secondary">Service</span>
+</div>
+<div class="h-px bg-outline-variant flex-grow mx-4 mt-[-20px]"></div>
+<div class="flex flex-col items-center gap-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">2</div>
+<span class="text-label-bold font-label-bold text-on-surface-variant">Details</span>
+</div>
+<div class="h-px bg-outline-variant flex-grow mx-4 mt-[-20px]"></div>
+<div class="flex flex-col items-center gap-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">3</div>
+<span class="text-label-bold font-label-bold text-on-surface-variant">Contact</span>
+</div>
+</div>
+<!-- Step 1: Service Type (Active State) -->
+<section class="bg-surface-container-lowest p-md md:p-lg rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)]">
+<h2 class="text-headline-lg font-headline-lg mb-md text-primary">What do you need help with?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-lg">Select the primary service to begin your customized quote.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Card 1 -->
+<div class="relative group cursor-pointer border-2 border-secondary rounded-xl p-md bg-secondary-container transition-all">
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="cleaning_services">cleaning_services</span>
+<div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-xs">Residential Cleaning</h3>
+<p class="text-body-md font-body-md text-on-secondary-container">Professional deep cleaning for homes, apartments, and condos.</p>
+</div>
+<!-- Card 2 -->
+<div class="relative group cursor-pointer border border-outline-variant rounded-xl p-md bg-surface-container-lowest hover:border-secondary transition-all">
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl group-hover:text-secondary" data-icon="local_shipping">local_shipping</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-xs">Professional Moving</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Full-service local and long-distance moving solutions.</p>
+</div>
+<!-- Card 3 -->
+<div class="relative group cursor-pointer border border-outline-variant rounded-xl p-md bg-surface-container-lowest hover:border-secondary transition-all">
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl group-hover:text-secondary" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-xs">Packing Services</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Expert packing and unpacking to keep your belongings safe.</p>
+</div>
+<!-- Card 4 -->
+<div class="relative group cursor-pointer border border-outline-variant rounded-xl p-md bg-surface-container-lowest hover:border-secondary transition-all">
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl group-hover:text-secondary" data-icon="warehouse">warehouse</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-xs">Storage Solutions</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Secure, climate-controlled storage for short or long term.</p>
+</div>
+</div>
+</section>
+<!-- Step 2 Placeholder (Visual only) -->
+<section class="bg-surface-container-low opacity-60 p-md md:p-lg rounded-xl border border-dashed border-outline">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="calendar_month">calendar_month</span>
+<h2 class="text-headline-md font-headline-md text-on-surface-variant">Schedule &amp; Location Details</h2>
+</div>
+</section>
+<div class="flex justify-end gap-md">
+<button class="px-lg py-md rounded-lg font-label-bold text-label-bold text-primary border border-primary hover:bg-surface-container-low transition-colors">Save for Later</button>
+<button class="px-lg py-md rounded-lg font-label-bold text-label-bold bg-secondary text-on-secondary hover:brightness-110 shadow-lg transition-all active:scale-95">Continue to Details</button>
+</div>
+</div>
+<!-- Sidebar Summary -->
+<aside class="lg:col-span-4 space-y-md">
+<div class="sticky top-28 bg-surface-container-lowest p-md md:p-lg rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-outline-variant">
+<h3 class="text-headline-md font-headline-md text-primary border-b border-outline-variant pb-md mb-md">Request Summary</h3>
+<div class="space-y-md">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-secondary" data-icon="done_all" style="font-variation-settings: 'wght' 700;">done_all</span>
+<div>
+<p class="text-label-bold font-label-bold text-on-surface-variant">Service Selected</p>
+<p class="text-body-md font-body-md font-bold text-primary">Residential Cleaning</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-lg space-y-sm">
+<div class="flex justify-between items-center">
+<span class="text-body-md font-body-md text-on-surface-variant">Base Rate</span>
+<span class="text-body-md font-body-md font-bold text-primary">KES 12,000.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-body-md font-body-md text-on-surface-variant">Frequency Discount</span>
+<span class="text-body-md font-body-md font-bold text-secondary">KES 0.00</span>
+</div>
+<div class="pt-sm border-t border-outline-variant flex justify-between items-center">
+<span class="text-label-bold font-label-bold text-primary">Estimated Total</span>
+<span class="text-headline-md font-headline-md text-primary">KES 12,000.00</span>
+</div>
+</div>
+<div class="pt-md">
+<div class="flex items-center gap-sm mb-md">
+<img alt="Support Specialist" class="w-12 h-12 rounded-full object-cover" data-alt="A professional female customer support specialist with a warm, friendly smile, wearing a professional navy blue corporate uniform. She is set against a brightly lit, modern office background with soft bokeh lighting. The overall mood is trustworthy, reliable, and corporate modern, reflecting the CleanMove Pro brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWJdOTkuQIMlh8kyBba9UCOolGXJ2a6nI_rMnINV40FOE3pKRNp-MAzhrlCo-93F8HDFbh2ZEM5EKOzT5iRlpXD0Zps78ZETy87Cs1DzbzRQv5SxmukLAXTgAPJyEz2CnmJRl-S3fOR4qPNkiPB7LibEFpJdG6tMlrzANyGQ5AyEBKqa6w4F6XQ8KBR6jHIW1SYXN11K8wgtXBekPcqm0rTeJ-0dEl-RQleCh5MYHybAlbukM-3HPFs1y7wZuyaEo2VxheVme9Fo"/>
+<div>
+<p class="text-label-bold font-label-bold text-primary">Need help?</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Chat with Sarah</p>
+</div>
+</div>
+<div class="flex items-center gap-sm text-on-secondary-container bg-secondary-container p-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<span class="text-label-bold font-label-bold">Satisfaction Guaranteed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md">
+<img alt="Pristine Living Room" class="w-full h-auto object-cover" data-alt="A realistic, high-quality photograph of a clean, well-lit, and spacious modern living room. The room features a comfortable grey sofa, a sleek wooden coffee table, and large windows that let in plenty of natural morning light. The environment is spotless and organized, showcasing a high standard of professional cleaning. The atmosphere is warm, inviting, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe4SMOIHzcuOf-5HzzKkSbP9OmFfbxPvITvDmcbpdQjEw52K4J7sAxRp9FfbbFsKWINiWncB1qnouD9ynY1Pp0KITNaret3tU5pozZAo7DDVBHL4q9SVm7SbjvGgobxMI7OQI7AhGzBDpT5wDypkelKis0Ka32t5ej5OvGUyeDVhTUTIWic1enyGlauuDvD-As_0scICqxfKA7W3fbnNCqZG2L37Oo6_KVYZYfbNp71eQ4rF1ufAgitjigONw9BfnPgRGx0E_Qh4A"/>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-primary-container dark:bg-primary-container border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-md md:px-lg py-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm">
+<div class="text-headline-md font-headline-md text-surface-container-lowest">CleanMove Pro</div>
+<p class="text-surface-container-high font-body-md text-body-md mt-sm">© 2024 CleanMove Pro. All rights reserved. Built for Trust &amp; Reliability.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="text-secondary-fixed font-bold text-label-bold">Services</h4>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Residential Cleaning</a>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Commercial Moving</a>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Packing Services</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="text-secondary-fixed font-bold text-label-bold">Resources</h4>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="../our_services_cleanmove_pro_realistic/services.html">Storage Solutions</a>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-surface-container-high dark:text-surface-variant hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="text-secondary-fixed font-bold text-label-bold">Connect</h4>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-surface-container-lowest cursor-pointer hover:text-secondary-fixed" data-icon="phone">phone</span>
+<span class="material-symbols-outlined text-surface-container-lowest cursor-pointer hover:text-secondary-fixed" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-surface-container-lowest cursor-pointer hover:text-secondary-fixed" data-icon="location_on">location_on</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+  const mobileNavButton = document.getElementById("mobileNavButton");
+  const mobileNav = document.getElementById("mobileNav");
+  if (mobileNavButton && mobileNav) {
+    mobileNavButton.addEventListener("click", () => {
+      const isOpen = !mobileNav.classList.toggle("hidden");
+      mobileNavButton.setAttribute("aria-expanded", isOpen);
+    });
+  }
+</script>
+</body></html>
